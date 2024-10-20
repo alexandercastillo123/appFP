@@ -103,18 +103,20 @@ public class frm15 extends JFrame {
 	}
 
 	protected void btnCalcular_actionPerformed() {
-		int varones = Integer.parseInt( txtjuan.getText() );
-		int mujeres = Integer.parseInt( txtrosa.getText() );
+		int juan = Integer.parseInt( txtjuan.getText() );
+		int rosa = Integer.parseInt( txtrosa.getText() );
+		int daniel = Integer.parseInt( txtdaniel.getText() );
 
-		int total = varones + mujeres;
-		double pVarones = varones * 100.0 / total;
-		double pMujeres = mujeres * 100.0 / total;
-		double dani = mujeres*2;
+		int total = juan + rosa + (daniel/3);
+		double pjuan = juan * 100.0 / total;
+		double prosa = rosa * 100.0 / total;
+		double pdaniel = (daniel/3) * 100.0 / total;
 
 		DecimalFormat df = new DecimalFormat( "####.##");
-		lbljuan.setText( df.format( pVarones ) + " %" );
-		lblrosa.setText( df.format( pMujeres ) + " %" );
-		lbldaniel.setText( df.format( dani) + " %" );
+		lbljuan.setText( df.format( pjuan ) + " %" );
+		lblrosa.setText( df.format( prosa ) + " %" );
+		lbldaniel.setText( df.format( pdaniel) + " %" );
+		txtcapital.setText( df.format(""+ total ));
 	}
 
 }
