@@ -44,7 +44,7 @@ public class frm03 extends JFrame {
 		getContentPane().add(lbltipo);
 		
 		lblangulo = new JLabel("°");
-		lblangulo.setBounds(200, 50, 120, 30);
+		lblangulo.setBounds(195, 40, 120, 30);
 		getContentPane().add(lblangulo);
 
 
