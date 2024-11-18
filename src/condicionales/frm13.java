@@ -3,6 +3,8 @@ package condicionales;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Console;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -28,7 +30,7 @@ public class frm13 extends JFrame {
 
     public frm13() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(0, 0, 300, 250);
+        setBounds(0, 0, 320, 250);
         setLayout(null);
         setLocationRelativeTo(null);
 
@@ -45,7 +47,7 @@ public class frm13 extends JFrame {
         getContentPane().add(btnVerificar);
 
         lblResultado = new JLabel("");
-        lblResultado.setBounds(70, 140, 250, 30);
+        lblResultado.setBounds(20, 140, 250, 30);
         getContentPane().add(lblResultado);
 
         btnVerificar.addActionListener(new ActionListener() {
@@ -69,11 +71,18 @@ public class frm13 extends JFrame {
         int decena = (numero / 10) % 10;
         int unidad = numero % 10;
 
-        
-        if ((centena == decena - 1 && decena == unidad - 1) || (centena == decena + 1 && decena == unidad + 1)) {
-            lblResultado.setText("Consecutivas.");
-        } else {
-            lblResultado.setText("No son consecutivas.");
-        }
+        if (centena + 1 == decena && decena + 1 == unidad)
+            {
+                lblResultado.setText("Las cifras son consecutivas en orden ascendente.");
+            }
+            // Verificar si son consecutivas en orden descendente
+            else if (centena - 1 == decena && decena - 1 == unidad)
+            {
+                lblResultado.setText("Las cifras son consecutivas en orden descendente.");
+            }
+            else
+            {
+                lblResultado.setText("Las cifras no son consecutivas.");
+            }
     }
 }

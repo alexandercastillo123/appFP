@@ -36,7 +36,7 @@ public class frm16 extends JFrame {
 		setLayout(null);
 		setLocationRelativeTo(null);
 
-		JLabel lblhoras = new JLabel("Total vendido :");
+		JLabel lblhoras = new JLabel("Total horas :");
 		lblhoras.setBounds(50, 50, 80, 30);
 		getContentPane().add(lblhoras);
 

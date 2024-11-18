@@ -37,7 +37,7 @@ public class frm18 extends JFrame {
         getContentPane().add(lblDonacion);
 
         txtDonacion = new JTextField();
-        txtDonacion.setBounds(150, 30, 150, 30);
+        txtDonacion.setBounds(170, 30, 150, 30);
         getContentPane().add(txtDonacion);
 
         JButton btnCalcular = new JButton("Calcular");
